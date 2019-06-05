@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gx-lz-yd9">
-                                <rect key="frame" x="155" y="152" width="104" height="30"/>
+                                <rect key="frame" x="290" y="152" width="104" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4S3-ps-MvE"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="5AW-m0-9aE"/>
@@ -48,26 +48,47 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IVg-QC-ftK">
                                 <rect key="frame" x="20" y="190" width="374" height="656"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSW-pb-cGQ">
+                                <rect key="frame" x="20" y="151" width="95" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="KZc-jh-c38"/>
+                                    <constraint firstAttribute="width" constant="95" id="ngb-uH-Ywi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdY-H7-AcE">
+                                <rect key="frame" x="123" y="151" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="a0f-ae-O5L"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IVg-QC-ftK" secondAttribute="bottom" constant="16" id="1Qc-eR-NZR"/>
                             <constraint firstItem="fib-4l-ef9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="93j-lX-KTs"/>
-                            <constraint firstItem="7gx-lz-yd9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="Cnc-Kf-17W"/>
+                            <constraint firstItem="7gx-lz-yd9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="290" id="Cnc-Kf-17W"/>
                             <constraint firstItem="IVg-QC-ftK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JJ4-UF-RgT"/>
                             <constraint firstItem="7gx-lz-yd9" firstAttribute="top" secondItem="fib-4l-ef9" secondAttribute="bottom" constant="8" id="Mnc-M5-NDE"/>
+                            <constraint firstItem="gdY-H7-AcE" firstAttribute="top" secondItem="fib-4l-ef9" secondAttribute="bottom" constant="7" id="Nrs-Xc-g3i"/>
                             <constraint firstItem="fib-4l-ef9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UqM-HW-Vfz"/>
                             <constraint firstItem="IVg-QC-ftK" firstAttribute="top" secondItem="7gx-lz-yd9" secondAttribute="bottom" constant="8" id="eeT-1i-KHE"/>
                             <constraint firstItem="7gx-lz-yd9" firstAttribute="top" secondItem="CJK-2g-qcJ" secondAttribute="bottom" constant="8" id="f3l-hw-iqo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7gx-lz-yd9" secondAttribute="trailing" constant="155" id="hO3-NB-HbH"/>
+                            <constraint firstItem="vSW-pb-cGQ" firstAttribute="top" secondItem="CJK-2g-qcJ" secondAttribute="bottom" constant="7" id="fvT-rA-2uQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7gx-lz-yd9" secondAttribute="trailing" constant="20" id="hO3-NB-HbH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IVg-QC-ftK" secondAttribute="trailing" constant="20" id="k4h-Cd-zUp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fib-4l-ef9" secondAttribute="trailing" constant="20" id="m4E-OL-zko"/>
+                            <constraint firstItem="gdY-H7-AcE" firstAttribute="leading" secondItem="vSW-pb-cGQ" secondAttribute="trailing" constant="8" id="pQk-ob-D3z"/>
+                            <constraint firstItem="vSW-pb-cGQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qDg-ab-9wg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="awesomeImageView" destination="IVg-QC-ftK" id="s6T-gB-xPP"/>
                         <outlet property="messageLabel" destination="fib-4l-ef9" id="eco-6T-n5H"/>
+                        <outlet property="soundSwitch" destination="gdY-H7-AcE" id="lCk-DR-lm7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
